@@ -219,8 +219,13 @@
           					const value=await data.text();
                     // console.log(error);
                     error.innerHTML = value;
-                    var eve="<?php echo $_SESSION['event_id'];?>";
-                   //var eve="../Events?event_id="+eve;
+			if(value!='Existed')
+			{
+				var eve="<?php echo $_SESSION['event_id'];?>";
+                  		var eve="../Events?event_id="+eve;	
+			}
+			
+                    
 		}
 	else {
                   error.innerHTML="Some database Error";
